@@ -36,14 +36,14 @@
                         </ul>
                     </li>
                     <li class="li-dropdown">
-                        <a href="#">
+                        <a href="/CODE/php/simulateur.php">
                             Simulateurs
                             <img src="/CODE/assets/arrow_drop_down.png" alt="flèche vers le bas" />
                         </a>
                         <ul class="submenu">
-                            <li><a href="#">Calcul ton IMC</a></li>
-                            <li><a href="#">Calcul ton IMG</a></li>
-                            <li><a href="#">Calcul ton apport calorique quotidien</a></li>
+                            <li><a href="/CODE/php/simulateur.php">Calcul ton IMC</a></li>
+                            <li><a href="/CODE/php/simulateur.php">Calcul ton IMG</a></li>
+                            <li><a href="/CODE/php/simulateur.php">Calcul ton apport calorique quotidien</a></li>
                         </ul>
                     </li>
                     <li><a href="/CODE/php/a-propos.php">À propos</a></li>
