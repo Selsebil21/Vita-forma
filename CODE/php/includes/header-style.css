@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Oswald:wght@200..700&display=swap");
+
+/* Je détermine les polices*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Crimson Text", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
+}
+
+/* HEADER */
+/* Je détermine le header */
+/* VARIABLES */
+:root {
+  --primary: #324759;
+  --accent: #db7328;
+  --text: #222;
+  --bg-transparent: rgba(255, 255, 255, 0);
+  --bg-solid: #ffffff;
+}
+
+/* HEADER GÉNÉRAL */
+#main-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: var(--bg-transparent);
+  backdrop-filter: blur(8px);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ÉTAT OPAQUE AU SCROLL */
+#main-header.scrolled {
+  background-color: var(--bg-solid);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* PREMIÈRE BARRE (TOP) */
+.header-top {
+  width: 99%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 8px;
+}
+
+.logo {
+  height: 60px;
+  max-width: 180px;
+  object-fit: contain;
+}
+
+/* BOUTON CONNEXION */
+.cta-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background-color: #db7328;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #db7328da;
+  border: 2px solid var(--accent);
+  color: white;
+}
+
+.cta-button img {
+  height: 20px;
+  width: auto;
+}
+
+/* DEUXIÈME BARRE (NAV + SEARCH) */
+.header-bottom {
+  width: 98%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid var(--primary);
+  padding-top: 10px;
+  flex-wrap: wrap;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  position: relative;
+  padding: 10px 0;
+}
+
+.navbar a {
+  display: flex;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  font-size: 1.1rem;
+  position: relative;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: var(--primary);
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+.submenu {
+  display: none !important;
+  /* caché par défaut */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--bg-transparent);
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.453);
+  min-width: 200px;
+  z-index: 900;
+}
+
+.submenu li a {
+  display: block;
+  padding: 10px;
+  color: var(--text);
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.li-dropdown:hover .submenu {
+  display: block !important;
+  /* affiché au survol */
+}
+
+/* SEARCH BAR */
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-left: 2px solid var(--primary);
+  padding-left: 12px;
+}
+
+.search-box img {
+  height: 25px;
+  width: auto;
+}
+
+.search-box input {
+  border: none;
+  font-size: 1rem;
+  padding: 8px 12px;
+  border-radius: 6px;
+  max-width: 400px;
+  background-color: #f9f9f9;
+}
+
+.search-box input:focus {
+  outline: 1px solid var(--primary);
+}
+
+/* FIN DU HEADER */
+
+/* MAIN */
+
+/* POLICE DES TITRES */
+h1 h3 {
+  font-family: "Oswald", sans-serif;
+}
+
+h2 {
+  font-family: "Oswald", sans-serif;
+  padding: 1% 0;
+  text-align: center;
+}
