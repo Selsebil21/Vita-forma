@@ -283,65 +283,65 @@
 </body>
 
 <script>
-window.addEventListener("scroll", () => {
-    const header = document.getElementById("main-header");
-    if (window.scrollY > 700) {
-        header.classList.add("scrolled");
-    } else {
-        header.classList.remove("scrolled");
-    }
-});
+    window.addEventListener("scroll", () => {
+        const header = document.getElementById("main-header");
+        if (window.scrollY > 700) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    });
 </script>
 
 <script>
-let currentIndex = 0;
-const slides = document.querySelectorAll(".slide");
+    let currentIndex = 0;
+    const slides = document.querySelectorAll(".slide");
 
-setInterval(() => {
-    slides[currentIndex].classList.remove("active");
-    currentIndex = (currentIndex + 1) % slides.length;
-    slides[currentIndex].classList.add("active");
-    document.querySelector(".slides").style.transform = `translateX(-${
+    setInterval(() => {
+        slides[currentIndex].classList.remove("active");
+        currentIndex = (currentIndex + 1) % slides.length;
+        slides[currentIndex].classList.add("active");
+        document.querySelector(".slides").style.transform = `translateX(-${
         currentIndex * 100
       }%)`;
-}, 4000);
+    }, 4000);
 </script>
 <script>
-const track = document.querySelector(".carousel-track");
-const articles = document.querySelectorAll(".article");
-const nextBtn = document.querySelector(".droite");
-const prevBtn = document.querySelector(".gauche");
-let index = 0;
-const visibleArticles = 3;
-const total = articles.length;
+    const track = document.querySelector(".carousel-track");
+    const articles = document.querySelectorAll(".article");
+    const nextBtn = document.querySelector(".droite");
+    const prevBtn = document.querySelector(".gauche");
+    let index = 0;
+    const visibleArticles = 3;
+    const total = articles.length;
 
-function updateCarousel() {
-    const width = articles[0].offsetWidth;
-    track.style.transform = `translateX(-${index * width}px)`;
-}
-
-function next() {
-    if (index < total - visibleArticles) {
-        index++;
-    } else {
-        index = 0;
+    function updateCarousel() {
+        const width = articles[0].offsetWidth;
+        track.style.transform = `translateX(-${index * width}px)`;
     }
-    updateCarousel();
-}
 
-function prev() {
-    if (index > 0) {
-        index--;
-    } else {
-        index = total - visibleArticles;
+    function next() {
+        if (index < total - visibleArticles) {
+            index++;
+        } else {
+            index = 0;
+        }
+        updateCarousel();
     }
-    updateCarousel();
-}
 
-nextBtn.addEventListener("click", next);
-prevBtn.addEventListener("click", prev);
+    function prev() {
+        if (index > 0) {
+            index--;
+        } else {
+            index = total - visibleArticles;
+        }
+        updateCarousel();
+    }
 
-setInterval(next, 5000); // toutes les 5 secondes
+    nextBtn.addEventListener("click", next);
+    prevBtn.addEventListener("click", prev);
+
+    setInterval(next, 5000); // toutes les 5 secondes
 </script>
 
 </html>

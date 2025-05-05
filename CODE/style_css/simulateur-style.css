@@ -1,20 +1,58 @@
-body {
-font-family: Arial, sans-serif;
-padding: 20px;
-max-width: 800px;
-margin: auto;
-background: #f5f5f5;
+.tab-titles {
+display: flex;
+gap: 10px;
+justify-content: center;
+margin: 200px auto;
 }
 
-h2 {
-color: #2c3e50;
+.tab-button {
+padding: 10px 20px;
+background-color: #eee;
+border: none;
+cursor: pointer;
+font-weight: bold;
+border-radius: 8px;
+transition: background 0.3s;
 }
 
+.tab-button.active {
+background-color: #4CAF50;
+color: white;
+}
+
+.tab-content {
+display: none;
+}
+
+.tab-content.active {
+display: block;
+animation: fadeIn 0.4s ease;
+}
+
+.visuel img {
+    max-width: 100%;
+    width: 200px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  
+  .visuel img.show {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+
+  
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(10px); }
+to { opacity: 1; transform: translateY(0); }
+}
+  
 section {
 background: #fff;
 padding: 20px;
 border-radius: 10px;
-margin-bottom: 30px;
+margin: 200px auto;
 box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 

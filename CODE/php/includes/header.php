@@ -9,18 +9,12 @@
 
 <body>
     <header id="main-header">
-        <div class="header-top">
+        <div class="header-bottom">
+
             <a href="/CODE/php/index.php">
                 <img src="/CODE/assets/logo-vita-forma_transparent.png" alt="Logo Vita Forma" class="logo" />
             </a>
 
-            <button class="cta-button" type="button">
-                <img src="/CODE/assets/connexion(4).png" alt="Connexion" />
-                Connexion / Inscription
-            </button>
-        </div>
-
-        <div class="header-bottom">
             <nav class="navbar">
                 <ul>
                     <li><a href="/CODE/php/index.php">Accueil</a></li>
@@ -50,6 +44,7 @@
                     <li><a href="/CODE/php/contact.php">Contact</a></li>
                 </ul>
             </nav>
+
             <div class="search-box">
                 <img src="/CODE/assets/symbole-de-linterface-de-recherche.png" alt="Loupe" />
                 <input type="search" placeholder="Rechercher..." />
