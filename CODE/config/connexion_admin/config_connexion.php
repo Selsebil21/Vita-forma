@@ -1,8 +1,8 @@
 <?php
-session_start(); 
+session_start();
 
 // Inclure le fichier de connexion à la base de données
-include '../database/connex_bdd.php'; // Chemin relatif à ton fichier de connexion
+include './CODE/config/database/connex_bdd.php'; // Chemin relatif à ton fichier de connexion
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = trim($_POST['email']);
@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 if ($user['role'] == 'admin') {
                     echo "Bienvenue, administrateur " . htmlspecialchars($user['pseudo']) . "!";
                     // Redirection ou traitement supplémentaire pour les administrateurs
-                    header("Location: ../connexion_admin/espace_admin.php"); // Remplace par la page d'accueil de l'admin
+                    header("Location : ./espace_admin.php"); // Remplace par la page d'accueil de l'admin
                     exit();
                 } else {
                     echo "Vous n'êtes pas administrateur.";
@@ -42,4 +42,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $connexion->close();
 }
-?>

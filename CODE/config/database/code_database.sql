@@ -1,17 +1,17 @@
 -- Création de la base de données
-CREATE DATABASE mon_blog;
+CREATE DATABASE vita_forma;
 
-USE mon_blog;
+USE vita_forma;
 
 -- Table UTILISATEURS
-CREATE TABLE utilisateurs (
+CREATE TABLE admin (
     id_utilisateur INT AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(100) NOT NULL,
     prenom VARCHAR(100) NOT NULL,
     pseudo VARCHAR(100) NOT NULL UNIQUE,
     email VARCHAR(100) NOT NULL UNIQUE,
     mot_de_passe VARCHAR(255) NOT NULL,
-    role ENUM('utilisateur', 'admin') DEFAULT 'utilisateur'
+    role ENUM('admin') DEFAULT 'admin'
 );
 
 -- Table CATEGORIES
@@ -28,7 +28,8 @@ CREATE TABLE articles (
     contenu TEXT NOT NULL,
     date_publication DATETIME DEFAULT CURRENT_TIMESTAMP,
     id_auteur INT NOT NULL,
-    id_categorie INT NOT NULL,
+    id_categorie INT NOT NULL FOREIGN KEY,
+    image VARCHAR(255) DEFAULT NULL;
     FOREIGN KEY (id_auteur) REFERENCES utilisateurs(id_utilisateur) ON DELETE CASCADE,
     FOREIGN KEY (id_categorie) REFERENCES categories(id_categorie) ON DELETE CASCADE
 );
@@ -46,4 +47,4 @@ CREATE TABLE commentaires (
 
 
 ALTER TABLE articles
-ADD COLUMN image VARCHAR(255) DEFAULT NULL;
+ADD 

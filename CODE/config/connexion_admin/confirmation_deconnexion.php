@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <title>Déconnexion Réussie</title>
     <link rel="stylesheet" href="popup_deco.css">
 </head>
+
 <body>
     <div class="popup" id="popup">
         <div class="popup-content">
@@ -20,8 +22,9 @@
 
         // Fonction pour fermer la pop-up et rediriger vers la page d'accueil
         function fermerPopup() {
-            window.location.href = "../index.php";
+            window.location.href = "/CODE/php/index.php";
         }
     </script>
 </body>
+
 </html>

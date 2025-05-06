@@ -8,7 +8,6 @@
 </head>
 
 <body>
-    <?php require '../includes/header.php'; ?>
 
     <form action="config_connexion.php" method="POST" enctype="multipart/form-data">
         <div>
