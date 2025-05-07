@@ -1,4 +1,12 @@
 <?php
+session_start();
+
+// Vérification de la session de l'administrateur
+if (!isset($_SESSION['admin_id'])) {
+    header('Location: connexion.php');
+    exit();
+}
+
 $page_name = basename($_SERVER['PHP_SELF'], ".php");
 
 switch ($page_name) {
@@ -32,12 +40,12 @@ switch ($page_name) {
         </nav>
     </header>
 
-    <h1><?php echo htmlspecialchars($h1_text); ?></h1>
+    <h1>Bienvenue, administrateur <?php echo htmlspecialchars($_SESSION['admin_email']); ?> !</h1>
 
     <main>
         <section id="ajout_article">
             <h2>Ajouter un article</h2>
-            <?php include '..\form_ajout_article\ajout_article.php' ?>
+            <?php include __DIR__ . '/../form_ajout_article/ajout_article.php'; ?>
         </section>
 
         <hr>
@@ -45,7 +53,10 @@ switch ($page_name) {
         <section id="gestion_articles">
             <h2>Gérer les articles</h2>
             <div>
-                <?php include '../tous_les_articles/liste_articles.php' ?>
+                <?php include __DIR__ . '/../tous_les_articles/liste_articles.php'; ?>
             </div>
         </section>
     </main>
+</body>
+
+</html>

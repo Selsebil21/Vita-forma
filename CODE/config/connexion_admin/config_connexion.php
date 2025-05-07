@@ -1,44 +1,49 @@
 <?php
 session_start();
 
-// Inclure le fichier de connexion à la base de données
-include './CODE/config/database/connex_bdd.php'; // Chemin relatif à ton fichier de connexion
+// Vérifier la présence du token CSRF
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['csrf_token']) && $_POST['csrf_token'] === $_SESSION['csrf_token']) {
+        // Le token est valide, procéder à la connexion
+        $email = $_POST['email'];
+        $mot_de_passe = $_POST['mot_de_passe'];
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $email = trim($_POST['email']);
-    $mot_de_passe = trim($_POST['mot_de_passe']);
+        // Connexion à la base de données
+        $connexion = new mysqli('localhost', 'root', '', 'vita_forma');
+        if ($connexion->connect_error) {
+            die("Échec de la connexion : " . $connexion->connect_error);
+        }
 
-    // Préparer la requête pour vérifier les informations d'utilisateur
-    $sql = "SELECT * FROM utilisateurs WHERE email = ?";
-    $stmt = $connexion->prepare($sql);
-    if ($stmt) {
-        $stmt->bind_param("s", $email);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        if ($result->num_rows > 0) {
-            $user = $result->fetch_assoc();
+        // Préparer la requête pour vérifier les informations d'utilisateur
+        $sql = "SELECT * FROM admin WHERE email = ?";
+        $stmt = $connexion->prepare($sql);
+        if ($stmt) {
+            $stmt->bind_param("s", $email);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            if ($result->num_rows > 0) {
+                $user = $result->fetch_assoc();
 
-            // Vérifier le mot de passe en texte brut
-            if ($mot_de_passe == $user['mot_de_passe']) {
-                // Vérifier si l'utilisateur est administrateur
-                if ($user['role'] == 'admin') {
-                    echo "Bienvenue, administrateur " . htmlspecialchars($user['pseudo']) . "!";
-                    // Redirection ou traitement supplémentaire pour les administrateurs
-                    header("Location : ./espace_admin.php"); // Remplace par la page d'accueil de l'admin
+                // Vérifier le mot de passe
+                if ($mot_de_passe === $user['mot_de_passe']) {
+                    // Connexion réussie
+                    $_SESSION['admin_id'] = $user['id_admin'];
+                    $_SESSION['admin_email'] = $user['email'];
+                    header("Location: espace_admin.php");
                     exit();
                 } else {
-                    echo "Vous n'êtes pas administrateur.";
+                    echo "Mot de passe incorrect.";
                 }
             } else {
-                echo "Mot de passe incorrect.";
+                echo "Email non trouvé.";
             }
+            $stmt->close();
         } else {
-            echo "Email non trouvé.";
+            echo "Erreur lors de la préparation de la requête : " . $connexion->error;
         }
-        $stmt->close();
-    } else {
-        echo "Erreur lors de la préparation de la requête : " . $connexion->error;
-    }
 
-    $connexion->close();
+        $connexion->close();
+    } else {
+        echo "Erreur CSRF : Token invalide.";
+    }
 }
