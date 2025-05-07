@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     // Inclure le fichier de connexion à la base de données
-    include '../database/connex_bdd.php';
+    include '../database/connex_bdd.php'; // Connexion à la base de données 
 
     // Préparer la requête SQL pour insérer l'article dans la base de données
     $sql = "INSERT INTO articles (titre, extrait, contenu, image, date_publication, id_categorie, id_auteur)

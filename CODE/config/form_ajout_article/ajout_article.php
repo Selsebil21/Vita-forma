@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 // Générer un jeton CSRF sécurisé s'il n'existe pas déjà
 if (empty($_SESSION['csrf_token'])) {
@@ -28,11 +30,10 @@ if (empty($_SESSION['csrf_token'])) {
             // Try the most popular premium features until May 21, 2025:
             'checklist', 'mediaembed', 'casechange', 'formatpainter', 'pageembed', 'a11ychecker',
             'tinymcespellchecker', 'permanentpen', 'powerpaste', 'advtable', 'advcode', 'editimage',
-            'advtemplate', 'ai', 'mentions', 'tinycomments', 'tableofcontents', 'footnotes', 'mergetags',
+            'advtemplate', 'ai', 'mentions', 'tableofcontents', 'footnotes', 'mergetags',
             'autocorrect', 'typography', 'inlinecss', 'markdown', 'importword', 'exportword', 'exportpdf'
         ],
         toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
-        tinycomments_author: 'Author name',
         mergetags_list: [{
                 value: 'First.Name',
                 title: 'First Name'
@@ -78,7 +79,7 @@ if (empty($_SESSION['csrf_token'])) {
 </head>
 
 <body>
-    <form action="../form_ajout_article/publier_article.php" method="POST" enctype="multipart/form-data">
+    <form action="publier_article.php" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
 
         <div>

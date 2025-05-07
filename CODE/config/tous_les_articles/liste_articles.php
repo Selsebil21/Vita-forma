@@ -26,9 +26,8 @@
                 echo '<link rel="stylesheet" href="..\tous_les_articles\liste_articles_styles.css">';
                 include_once "database\connex_bdd.php";
         }
-
         // Requête pour récupérer les articles
-        $sql = "SELECT id_article, titre, extrait, date_publication FROM articles ORDER BY date_publication DESC";
+        $sql = "SELECT id_article, titre, extrait, date_publication FROM article ORDER BY date_publication DESC";
         $result = $connexion->query($sql);
         if ($result->num_rows > 0) {
             // Affichage de chaque article
