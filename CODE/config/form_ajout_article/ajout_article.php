@@ -4,9 +4,10 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 // Générer un jeton CSRF sécurisé s'il n'existe pas déjà
-if (empty($_SESSION['csrf_token'])) {
-    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
-}
+// if (empty($_SESSION['csrf_token'])) {
+//     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+// }
+//
 ?>
 
 <!DOCTYPE html>
@@ -22,6 +23,7 @@ if (empty($_SESSION['csrf_token'])) {
     <script>
     tinymce.init({
         selector: 'textarea',
+        // language: 'fr', // Définit la langue de l'éditeur en français
         plugins: [
             // Core editing features
             'anchor', 'autolink', 'charmap', 'codesample', 'emoticons', 'image', 'link', 'lists', 'media',
@@ -80,7 +82,7 @@ if (empty($_SESSION['csrf_token'])) {
 
 <body>
     <form action="publier_article.php" method="POST" enctype="multipart/form-data">
-        <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+        <!-- <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>"> -->
 
         <div>
             <label for="titre">Titre de l'article :</label><br>

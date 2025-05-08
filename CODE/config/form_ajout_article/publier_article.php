@@ -1,3 +1,4 @@
+<?php echo "PAGE OK"; ?>
 <?php
 session_start();
 
@@ -8,10 +9,11 @@ error_reporting(E_ALL);
 
 // Vérifier que le formulaire a été soumis
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    var_dump($_POST); // Debug ici pour voir ce qui est reçu
     // Vérification du jeton CSRF
-    if (!isset($_POST['csrf_token'], $_SESSION['csrf_token']) || !hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'])) {
-        die('Erreur de validation du jeton CSRF.');
-    }
+    // if (!isset($_POST['csrf_token'], $_SESSION['csrf_token']) || !hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'])) {
+    //     die('Erreur de validation du jeton CSRF.');
+    // }
 
     // Nettoyage et récupération des données du formulaire
     $titre = htmlspecialchars(trim($_POST['titre']));
