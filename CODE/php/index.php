@@ -44,7 +44,9 @@
                     captivants enrichis de conseils précieux sur le sport, la santé et
                     la nutrition.
                 </p>
-                <button class="button-sample" type="button">En savoir plus</button>
+                <a href="./a-propos.php">
+                    <button class="button-sample" type="button">En savoir plus</button>
+                </a>
             </div>
         </section>
 
@@ -110,25 +112,6 @@
             </div>
         </section>
 
-        <section class="slider">
-            <div class="slides">
-                <div class="slide active">
-                    <img src="../assets/panoramic6.jpg" alt="Slide 1" />
-                    <div class="caption">
-                        <p>Se remettre au sport en toute confiance</p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="../assets/pano.jpg" alt="Slide 2" />
-                    <div class="caption">Reprenez en main votre forme physique</div>
-                </div>
-                <div class="slide">
-                    <img src="../assets/panoramicc.jpg" alt="Slide 3" />
-                    <div class="caption">Des conseils pour tous !</div>
-                </div>
-            </div>
-        </section>
-
         <section id="recemment-publies">
             <h2>Articles récemment publiés</h2>
             <div class="carousel-container">
@@ -141,75 +124,88 @@
                         <!-- Article 1 -->
                         <div class="article">
                             <img class="image-article" src="../assets/sport-dysfonction-erectrile.jpg" alt="..." />
-                            <h3>La pratique du sport et la dysfonction érectile</h3>
-                            <p>
-                                <span id="second">Par l'auteur, le 24 Avril 2025</span><br />
-                                La dysfonction érectile (DE) est un problème de santé qui
-                                touche une proportion significative d’hommes, en particulier
-                                après l’âge de 40 ans. Mais saviez-vous que l’activité
-                                physique régulière peut jouer un rôle déterminant dans la
-                                prévention et la prise en charge de ce trouble ?
-                            </p>
-                            <button class="button-sample">Lire l'article</button>
+                            <div class="article-content">
+                                <h3>La pratique du sport et la dysfonction érectile</h3>
+                                <p>
+                                    <span id="second">Par l'auteur, le 24 Avril 2025</span><br />
+                                    La dysfonction érectile (DE) est un problème de santé qui
+                                    touche une proportion significative d’hommes, en particulier
+                                    après l’âge de 40 ans. Mais saviez-vous que l’activité
+                                    physique régulière peut jouer un rôle déterminant dans la
+                                    prévention et la prise en charge de ce trouble ?
+                                </p>
+                                <button class="button-sample">Lire l'article</button>
+                            </div>
                         </div>
 
                         <!-- Article 2 -->
                         <div class="article">
                             <img class="image-article" src="../assets/perte-ventre.jpg"
                                 alt="perte de ventre après 40 ans" />
-                            <h3>Perdre du ventre après 40 ans : les vraies solutions</h3>
-                            <p>
-                                <span id="second">Par l'auteur, le 18 Avril 2025</span><br />
-                                Perdre du ventre après 40 ans n’est pas seulement une question
-                                d’esthétique : c’est aussi un enjeu de santé. L’accumulation
-                                de graisse abdominale augmente considérablement le risque de
-                                maladies cardiovasculaires, de diabète de type 2 et
-                                d’hypertension...
-                            </p>
-                            <button class="button-sample">Lire l'article</button>
+                            <div class="article-content">
+                                <h3>Perdre du ventre après 40 ans : les vraies solutions</h3>
+                                <p>
+                                    <span id="second">Par l'auteur, le 18 Avril 2025</span><br />
+                                    Perdre du ventre après 40 ans n’est pas seulement une question
+                                    d’esthétique : c’est aussi un enjeu de santé. L’accumulation
+                                    de graisse abdominale augmente considérablement le risque de
+                                    maladies cardiovasculaires, de diabète de type 2 et
+                                    d’hypertension...
+                                </p>
+                                <button class="button-sample">Lire l'article</button>
+                            </div>
                         </div>
 
                         <!-- Article 3 -->
                         <div class="article">
                             <img class="image-article" src="../assets/alimentation-avant-sport.avif"
                                 alt="alimentation avant le sport" />
-                            <h3>
-                                Alimentation avant le sport : quoi manger pour performer?
-                            </h3>
-                            <p>
-                                <span id="second">Par l'auteur, le 13 Avril 2025</span><br />
-                                Bien s’alimenter avant une séance de sport est la clé d’une
-                                performance réussie. Mais entre les conseils contradictoires
-                                et les idées reçues, il peut être difficile de savoir quoi
-                                manger exactement...
-                            </p>
-                            <button class="button-sample">Lire l'article</button>
+                            <div class="article-content">
+                                <h3>
+                                    Alimentation avant le sport : quoi manger pour performer?
+                                </h3>
+                                <p>
+                                    <span id="second">Par l'auteur, le 13 Avril 2025</span><br />
+                                    Bien s’alimenter avant une séance de sport est la clé d’une
+                                    performance réussie. Mais entre les conseils contradictoires
+                                    et les idées reçues, il peut être difficile de savoir quoi
+                                    manger exactement...
+                                </p>
+                                <button class="button-sample">Lire l'article</button>
+                            </div>
                         </div>
 
                         <!-- Article 4 -->
                         <div class="article">
                             <img class="image-article" src="../assets/regime-vegetarien.jpg"
                                 alt="regime végétarien ou vegetalien" />
-                            <h3>Régime végétarien : bienfaits, risques et conseils</h3>
-                            <p>
-                                <span id="second">Par l'auteur, le 5 Avril 2025</span><br />
-                                Adopter un régime végétarien ou végétalien est devenu une
-                                tendance forte ces dernières années. Qu’il s’agisse de raisons
-                                éthiques, écologiques ou sanitaires, de plus en plus de
-                                Français renoncent à consommer de la viande et des produits
-                                d’origine animale. Mais ces régimes sont-ils vraiment
-                                bénéfiques pour la santé ?
-                            </p>
-                            <button class="button-sample">Lire l'article</button>
+                            <div class="article-content">
+
+                                <h3>Régime végétarien : bienfaits, risques et conseils</h3>
+                                <p>
+                                    <span id="second">Par l'auteur, le 5 Avril 2025</span><br />
+                                    Adopter un régime végétarien ou végétalien est devenu une
+                                    tendance forte ces dernières années. Qu’il s’agisse de raisons
+                                    éthiques, écologiques ou sanitaires, de plus en plus de
+                                    Français renoncent à consommer de la viande et des produits
+                                    d’origine animale. Mais ces régimes sont-ils vraiment
+                                    bénéfiques pour la santé ?
+                                </p>
+                                <button class="button-sample">Lire l'article</button>
+                            </div>
                         </div>
+
 
                         <!-- Ajoute autant d'articles que tu veux -->
                     </div>
                 </div>
-
                 <button class="fleche2">
                     <img src="../assets/en-arriere.png" alt="flèche droite" />
                 </button>
+            </div>
+
+            <div class="carousel-dots">
+                <!-- Les bulles seront générées dynamiquement en JS -->
             </div>
         </section>
 
@@ -222,7 +218,7 @@
                         initiative. Mais pour éviter blessures et complications, voici les
                         10 règles d’or à suivre pour une reprise sportive sereine.
                     </p>
-                    <a href="article.html" class="btn-article">Lire l'article</a>
+                    <a href="article.html" class="button-sample">Lire l'article</a>
                 </div>
             </div>
         </section>
@@ -230,17 +226,39 @@
         <section id="simulateurs">
             <h2>Utilisez le simulateur pour :</h2>
             <div class="simulateurs-container">
-                <div class="simulateur-card">
-                    <h3>Calculez votre IMC</h3>
-                    <a href="simulateurs.html#imc" class="btn-simulateur">Simuler</a>
+                <div class="simulateur-card imc">
+                    <h3>Calculer votre IMC</h3>
                 </div>
-                <div class="simulateur-card">
-                    <h3>Calculez votre IMG</h3>
-                    <a href="simulateurs.html#img" class="btn-simulateur">Simuler</a>
+                <div class="simulateur-card img">
+                    <h3>Calculer votre IMG</h3>
                 </div>
-                <div class="simulateur-card">
-                    <h3>Calculez votre apport calorique</h3>
-                    <a href="simulateurs.html#calories" class="btn-simulateur">Simuler</a>
+                <div class="simulateur-card calories">
+                    <h3>Calculer votre apport calorique quotidien</h3>
+                </div>
+            </div>
+
+            <!-- Un seul bouton, centré -->
+            <div class="simulateur-button-container">
+                <a href="simulateurs.html" class="cta-button"> Lancer la simulation</a>
+            </div>
+        </section>
+
+
+        <section class=" slider">
+            <div class="slides">
+                <div class="slide active">
+                    <img src="../assets/Panorama-planche-plage.jpg" alt="Slide 1" />
+                    <div class="caption">
+                        <p>Se remettre au sport en toute confiance</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="../assets/Panorama-tennis-woman.jpg" alt="Slide 2" />
+                    <div class="caption">Reprenez en main votre forme physique</div>
+                </div>
+                <div class="slide">
+                    <img src="../assets/Panorama-running-woman.jpg" alt="Slide 3" />
+                    <div class="caption">Des conseils pour tous !</div>
                 </div>
             </div>
         </section>
@@ -249,30 +267,27 @@
             <h2>Abonnez-vous à notre newsletter</h2>
 
             <div class="newsletter-container">
-                <div class="newsletter-text">
-                    <p>
-                        Tu veux des conseils simples, efficaces et motivants pour prendre
-                        soin de ta santé et de ton corps ?
-                        <br />
-                        Rejoins la communauté <strong>Vita-Forma</strong> et transforme ta
-                        routine santé en une vraie source d'énergie et de plaisir !
-                        <br />
-                        C’est gratuit et sans engagement.
-                    </p>
-                </div>
-            </div>
 
-            <div class="news-bottom">
-                <div class="">
-                    <h3>Ne rate rien pour booster ta forme !</h3>
-                    <form class="newsletter-form">
-                        <input type="text" placeholder="Nom ou Pseudo" />
-                        <input type="email" placeholder="exemple.nom@gmail.com" required />
-                        <button type="submit">Soumettre</button>
-                    </form>
-                </div>
-                <div class="newsletter-image">
-                    <img src="../assets/megaphone-newletter-removebg-preview.png" alt="megaphone alerte mail" />
+                <p class="newsletter-text">
+                    Tu veux des conseils simples, efficaces et motivants pour prendre
+                    soin de ta santé et de ton corps ?
+                    <br />
+                    Rejoins la communauté <strong>Vita-Forma</strong> et transforme ta
+                    routine santé en une vraie source d'énergie et de plaisir !
+                    <br />
+                    C’est gratuit et sans engagement.
+                </p>
+                <div class="news-bottom">
+                    <div class="news-bottom-content">
+                        <h3>Ne rate rien pour booster ta forme !</h3>
+                        <form class="newsletter-form">
+                            <input type="text" placeholder="Nom ou Pseudo" />
+                            <input type="email" placeholder="exemple.nom@gmail.com" required />
+                            <button type="submit" class="cta-button">Soumettre</button>
+                        </form>
+                    </div>
+                    <img class="newsletter-image" src="../assets/megaphone-newletter-removebg-preview.png"
+                        alt="megaphone alerte mail" />
                 </div>
             </div>
         </section>
@@ -283,65 +298,103 @@
 </body>
 
 <script>
-    window.addEventListener("scroll", () => {
-        const header = document.getElementById("main-header");
-        if (window.scrollY > 700) {
-            header.classList.add("scrolled");
-        } else {
-            header.classList.remove("scrolled");
+window.addEventListener("scroll", () => {
+    const header = document.getElementById("main-header");
+    if (window.scrollY > 700) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});
+</script>
+
+<script>
+const items = document.querySelectorAll('.item-categories');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
         }
     });
+}, {
+    threshold: 0.3
+});
+
+items.forEach((item, index) => {
+    // Alterne gauche/droite selon la position de l'élément
+    if (index % 2 === 0) {
+        item.classList.add('from-left');
+    } else {
+        item.classList.add('from-right');
+    }
+    observer.observe(item);
+});
 </script>
 
 <script>
-    let currentIndex = 0;
-    const slides = document.querySelectorAll(".slide");
+let currentIndex = 0;
+const slides = document.querySelectorAll(".slide");
 
-    setInterval(() => {
-        slides[currentIndex].classList.remove("active");
-        currentIndex = (currentIndex + 1) % slides.length;
-        slides[currentIndex].classList.add("active");
-        document.querySelector(".slides").style.transform = `translateX(-${
+setInterval(() => {
+    slides[currentIndex].classList.remove("active");
+    currentIndex = (currentIndex + 1) % slides.length;
+    slides[currentIndex].classList.add("active");
+    document.querySelector(".slides").style.transform = `translateX(-${
         currentIndex * 100
       }%)`;
-    }, 4000);
+}, 4000);
 </script>
+
 <script>
-    const track = document.querySelector(".carousel-track");
-    const articles = document.querySelectorAll(".article");
-    const nextBtn = document.querySelector(".droite");
-    const prevBtn = document.querySelector(".gauche");
-    let index = 0;
-    const visibleArticles = 3;
-    const total = articles.length;
+const track = document.querySelector(".carousel-track");
+const articles = document.querySelectorAll(".article");
+const nextBtn = document.querySelector(".fleche2");
+const prevBtn = document.querySelector(".gauche");
+const dotsContainer = document.querySelector(".carousel-dots");
 
-    function updateCarousel() {
-        const width = articles[0].offsetWidth;
-        track.style.transform = `translateX(-${index * width}px)`;
-    }
+const visibleArticles = 3;
+const total = articles.length;
+const totalSlides = Math.ceil(total / visibleArticles);
+let index = 0;
 
-    function next() {
-        if (index < total - visibleArticles) {
-            index++;
-        } else {
-            index = 0;
-        }
+// Crée les bulles
+for (let i = 0; i < totalSlides; i++) {
+    const dot = document.createElement("div");
+    dot.classList.add("dot");
+    if (i === 0) dot.classList.add("active");
+    dot.addEventListener("click", () => {
+        index = i;
         updateCarousel();
-    }
+    });
+    dotsContainer.appendChild(dot);
+}
 
-    function prev() {
-        if (index > 0) {
-            index--;
-        } else {
-            index = total - visibleArticles;
-        }
-        updateCarousel();
-    }
+function updateDots() {
+    document.querySelectorAll(".carousel-dots .dot").forEach((dot, i) => {
+        dot.classList.toggle("active", i === index);
+    });
+}
 
-    nextBtn.addEventListener("click", next);
-    prevBtn.addEventListener("click", prev);
+function updateCarousel() {
+    const width = articles[0].offsetWidth + 19; // 19px ≈ gap
+    track.style.transform = `translateX(-${index * width * visibleArticles}px)`;
+    updateDots();
+}
 
-    setInterval(next, 5000); // toutes les 5 secondes
+function next() {
+    index = (index + 1) % totalSlides;
+    updateCarousel();
+}
+
+function prev() {
+    index = (index - 1 + totalSlides) % totalSlides;
+    updateCarousel();
+}
+
+nextBtn.addEventListener("click", next);
+prevBtn.addEventListener("click", prev);
+setInterval(next, 5000);
 </script>
 
 </html>

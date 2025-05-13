@@ -42,11 +42,12 @@ body {
 /* ÉTAT OPAQUE AU SCROLL */
 #main-header.scrolled {
   background-color: var(--bg-solid);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.262);
 }
 
 /* BOUTON CONNEXION */
 .cta-button {
+  width: auto;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -62,7 +63,6 @@ body {
 
 .cta-button:hover {
   background-color: #db7328da;
-  border: 2px solid var(--accent);
   color: white;
 }
 
@@ -86,6 +86,40 @@ body {
   height: 60px;
   max-width: 180px;
   object-fit: contain;
+}
+ /* LOGO EFFET OVERLAY */
+ #logo-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  transition: opacity 0.8s ease;
+}
+
+#logo-anim {
+  width: 200px;
+  height: auto;
+  transition: all 1s ease-in-out;
+  opacity: 1;
+}
+
+/* Disparaît progressivement */
+#logo-overlay.animate-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Se déplace vers la position du header */
+#logo-anim.to-header {
+   position: absolute;
+  top: 15px;         /* plus haut pour montrer le mouvement */
+  left: 20px;
+  width: 130px;
+  transform: scale(0.8) translate(-40px, -30px);  /* léger glissement + réduction */
+  transition: all 1.4s cubic-bezier(0.77, 0, 0.175, 1); /* courbe plus fluide */
 }
 
 .navbar ul {
@@ -127,29 +161,49 @@ body {
 
 .submenu {
   display: none !important;
-  /* caché par défaut */
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: var(--bg-transparent);
+  background-color:rgba(255, 255, 255, 0.87);
   border-radius: 4px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.453);
+  width: auto;
   min-width: 200px;
   z-index: 900;
 }
 
-.submenu li a {
-  display: block;
-  padding: 10px;
-  color: var(--text);
-  font-size: 1rem;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
+.li-dropdown:hover > .submenu {
+  display: block !important;
 }
 
-.li-dropdown:hover .submenu {
+/* Affichage des sous-sous-menus (niveau 2+) */
+.submenu li {
+  position: relative;
+  padding: 12px 16px; /* pour ajuster l'espacement */
+}
+
+.submenu li:hover > .submenu {
   display: block !important;
-  /* affiché au survol */
+  top: 0;
+  left: 100%;
+}
+
+/* Flèche vers la droite */
+.submenu li > a::after {
+  content: "";
+  float: right;
+}
+
+.submenu li > .submenu::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -8px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid var(--bg-solid);
 }
 
 /* SEARCH BAR */
