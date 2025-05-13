@@ -298,17 +298,6 @@
 </body>
 
 <script>
-window.addEventListener("scroll", () => {
-    const header = document.getElementById("main-header");
-    if (window.scrollY > 700) {
-        header.classList.add("scrolled");
-    } else {
-        header.classList.remove("scrolled");
-    }
-});
-</script>
-
-<script>
 const items = document.querySelectorAll('.item-categories');
 
 const observer = new IntersectionObserver((entries) => {

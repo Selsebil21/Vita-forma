@@ -87,8 +87,8 @@ body {
   max-width: 180px;
   object-fit: contain;
 }
- /* LOGO EFFET OVERLAY */
- #logo-overlay {
+/* LOGO EFFET OVERLAY */
+#logo-overlay {
   position: fixed;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.85);
@@ -114,11 +114,11 @@ body {
 
 /* Se déplace vers la position du header */
 #logo-anim.to-header {
-   position: absolute;
-  top: 15px;         /* plus haut pour montrer le mouvement */
+  position: absolute;
+  top: 15px; /* plus haut pour montrer le mouvement */
   left: 20px;
   width: 130px;
-  transform: scale(0.8) translate(-40px, -30px);  /* léger glissement + réduction */
+  transform: scale(0.8) translate(-40px, -30px); /* léger glissement + réduction */
   transition: all 1.4s cubic-bezier(0.77, 0, 0.175, 1); /* courbe plus fluide */
 }
 
@@ -164,7 +164,7 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color:rgba(255, 255, 255, 0.87);
+  background-color: rgba(255, 255, 255, 0.87);
   border-radius: 4px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.453);
   width: auto;

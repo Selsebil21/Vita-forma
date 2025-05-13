@@ -23,9 +23,7 @@ SET time_zone = "+00:00";
 
 -- --------------------------------------------------------
 
---
 -- Structure de la table `admin`
---
 
 DROP TABLE IF EXISTS `admin`;
 CREATE TABLE IF NOT EXISTS `admin` (
@@ -39,9 +37,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
 
 -- --------------------------------------------------------
 
---
 -- Structure de la table `article`
---
 
 DROP TABLE IF EXISTS `article`;
 CREATE TABLE IF NOT EXISTS `article` (
@@ -58,9 +54,7 @@ CREATE TABLE IF NOT EXISTS `article` (
 
 -- --------------------------------------------------------
 
---
 -- Structure de la table `categorie`
---
 
 DROP TABLE IF EXISTS `categorie`;
 CREATE TABLE IF NOT EXISTS `categorie` (
@@ -71,9 +65,7 @@ CREATE TABLE IF NOT EXISTS `categorie` (
 
 -- --------------------------------------------------------
 
---
 -- Structure de la table `contact`
---
 
 DROP TABLE IF EXISTS `contact`;
 CREATE TABLE IF NOT EXISTS `contact` (
@@ -89,9 +81,7 @@ CREATE TABLE IF NOT EXISTS `contact` (
 
 -- --------------------------------------------------------
 
---
 -- Structure de la table `newsletter`
---
 
 DROP TABLE IF EXISTS `newsletter`;
 CREATE TABLE IF NOT EXISTS `newsletter` (

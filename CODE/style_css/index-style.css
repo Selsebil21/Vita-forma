@@ -82,7 +82,6 @@ body {
 
 /* Animation douce pour l'image */
 @keyframes float {
-
   0%,
   100% {
     transform: translateY(0px);
@@ -178,7 +177,7 @@ body {
   flex-direction: column;
   gap: 1.2em;
 }
-.content-categories p{
+.content-categories p {
   text-align: justify;
 }
 
@@ -323,14 +322,13 @@ span {
   justify-content: space-between;
 }
 
-
 /* Section 4 : 10 REGLES D'OR A CONNAITRE AVANT DE REPRENDRE LE SPORT */
 #regles-cover {
   background-image: url("../assets/athletik-lacets2.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  height:  80vh;
+  height: 80vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -350,7 +348,7 @@ span {
 }
 
 .regles-content {
-  max-width: 43%;  
+  max-width: 43%;
   padding: 40px 20px;
   background-color: rgba(0, 0, 0, 0.574);
   /* effet flou */
@@ -401,7 +399,7 @@ span {
 .simulateur-card:hover {
   transform: translateY(-6px);
 }
-.simulateur-card h3{
+.simulateur-card h3 {
   text-align: center;
 }
 
@@ -460,7 +458,7 @@ span {
 .slide img {
   width: 100%;
   height: auto;
-  object-fit:cover;
+  object-fit: cover;
 }
 
 .caption {
@@ -496,11 +494,11 @@ span {
   justify-content: space-between;
 }
 
-.newsletter-text{
+.newsletter-text {
   text-align: center;
 }
 
-.news-bottom{
+.news-bottom {
   width: 100%;
   margin: auto;
   display: flex;
@@ -543,7 +541,6 @@ span {
   animation: shake-zoom 0.6s ease forwards;
 }
 
-
 @keyframes shake-zoom {
   0% {
     transform: scale(1) translateX(0);
@@ -579,7 +576,6 @@ span {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-
   .header-top,
   .header-bottom {
     flex-direction: column;
@@ -599,5 +595,128 @@ span {
   .cta-button {
     width: 100%;
     justify-content: center;
+  }
+}
+
+/* TABLETTE : 768px à 1024px */
+@media screen and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .header img {
+    width: 180px;
+    margin-bottom: 10px;
+  }
+
+  .nav {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .nav a {
+    margin: 5px 10px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero-text {
+    margin-bottom: 20px;
+  }
+
+  .features {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .feature {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin: 10px 0;
+  }
+}
+
+/* SMARTPHONE : jusqu’à 767px */
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 15px;
+    margin: 0;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 5px;
+  }
+
+  .header img {
+    width: 150px;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav a {
+    display: block;
+    margin: 8px 0;
+    font-size: 16px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 10px;
+  }
+
+  .hero-text h1 {
+    font-size: 24px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+
+  .features {
+    flex-direction: column;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .feature {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 10px;
+  }
+
+  .footer-section {
+    margin: 10px 0;
   }
 }

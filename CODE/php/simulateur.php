@@ -40,7 +40,6 @@
                         <img id="image-resultat" src="../assets/IMC.jpg" alt="résultat visuel IMC graphique"
                             style="display:none;" />
                     </div>
-
                 </section>
             </div>
 
@@ -75,7 +74,6 @@
                     <div class="visuel">
                         <img id="image-resultat" src="" alt="résultat visuel" style="display:none;" />
                     </div>
-
                 </section>
             </div>
 
@@ -128,81 +126,81 @@
 
 
 <script>
-    // IMC
-    document.getElementById('imc-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const poids = parseFloat(document.getElementById('imc-poids').value);
-        const taille = parseFloat(document.getElementById('imc-taille').value) / 100;
-        const imc = (poids / (taille * taille)).toFixed(2);
-        document.getElementById('imc-result').textContent = `Votre IMC est ${imc}`;
-        afficherImageIMC(imc);
+// IMC
+document.getElementById('imc-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const poids = parseFloat(document.getElementById('imc-poids').value);
+    const taille = parseFloat(document.getElementById('imc-taille').value) / 100;
+    const imc = (poids / (taille * taille)).toFixed(2);
+    document.getElementById('imc-result').textContent = `Votre IMC est ${imc}`;
+    afficherImageIMC(imc);
 
+});
+
+// IMG
+document.getElementById('img-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const age = parseFloat(document.getElementById('img-age').value);
+    const sexe = parseInt(document.getElementById('img-sexe').value);
+    const poids = parseFloat(document.getElementById('img-poids').value);
+    const taille = parseFloat(document.getElementById('img-taille').value) / 100;
+    const imc = poids / (taille * taille);
+    const img = (1.2 * imc + 0.23 * age - 10.8 * sexe - 5.4).toFixed(2);
+    document.getElementById('img-result').textContent = `Votre IMG est ${img} %`;
+});
+
+// Calories
+document.getElementById('calorie-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const age = parseInt(document.getElementById('calorie-age').value);
+    const sexe = document.getElementById('calorie-sexe').value;
+    const poids = parseFloat(document.getElementById('calorie-poids').value);
+    const taille = parseFloat(document.getElementById('calorie-taille').value);
+    const activite = parseFloat(document.getElementById('calorie-activite').value);
+
+    let bmr;
+    if (sexe === 'homme') {
+        bmr = 88.362 + (13.397 * poids) + (4.799 * taille) - (5.677 * age);
+    } else {
+        bmr = 447.593 + (9.247 * poids) + (3.098 * taille) - (4.330 * age);
+    }
+
+    const calories = Math.round(bmr * activite);
+    document.getElementById('calorie-result').textContent =
+        `Vos besoins caloriques journaliers sont d’environ ${calories} kcal.`;
+});
+
+document.querySelectorAll(".tab-button").forEach(button => {
+    button.addEventListener("click", () => {
+        const tab = button.getAttribute("data-tab");
+
+        document.querySelectorAll(".tab-button").forEach(btn => btn.classList.remove("active"));
+        document.querySelectorAll(".tab-content").forEach(content => content.classList.remove(
+            "active"));
+
+        button.classList.add("active");
+        document.getElementById(tab).classList.add("active");
     });
+});
 
-    // IMG
-    document.getElementById('img-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const age = parseFloat(document.getElementById('img-age').value);
-        const sexe = parseInt(document.getElementById('img-sexe').value);
-        const poids = parseFloat(document.getElementById('img-poids').value);
-        const taille = parseFloat(document.getElementById('img-taille').value) / 100;
-        const imc = poids / (taille * taille);
-        const img = (1.2 * imc + 0.23 * age - 10.8 * sexe - 5.4).toFixed(2);
-        document.getElementById('img-result').textContent = `Votre IMG est ${img} %`;
-    });
+function afficherImageIMC(imc) {
+    const img = document.getElementById("image-resultat");
+    let src = "../assets/IMC.jpg";
 
-    // Calories
-    document.getElementById('calorie-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const age = parseInt(document.getElementById('calorie-age').value);
-        const sexe = document.getElementById('calorie-sexe').value;
-        const poids = parseFloat(document.getElementById('calorie-poids').value);
-        const taille = parseFloat(document.getElementById('calorie-taille').value);
-        const activite = parseFloat(document.getElementById('calorie-activite').value);
+    if (imc < 18.5) src = "images/maigreur.png";
+    else if (imc < 25) src = "images/normal.png";
+    else if (imc < 30) src = "images/surpoids.png";
+    else src = "images/obesite.png";
 
-        let bmr;
-        if (sexe === 'homme') {
-            bmr = 88.362 + (13.397 * poids) + (4.799 * taille) - (5.677 * age);
-        } else {
-            bmr = 447.593 + (9.247 * poids) + (3.098 * taille) - (4.330 * age);
-        }
+    img.src = src;
+    img.style.display = "block";
+    img.classList.remove("show");
 
-        const calories = Math.round(bmr * activite);
-        document.getElementById('calorie-result').textContent =
-            `Vos besoins caloriques journaliers sont d’environ ${calories} kcal.`;
-    });
+    // Forcer le reflow pour relancer l'animation
+    void img.offsetWidth;
 
-    document.querySelectorAll(".tab-button").forEach(button => {
-        button.addEventListener("click", () => {
-            const tab = button.getAttribute("data-tab");
-
-            document.querySelectorAll(".tab-button").forEach(btn => btn.classList.remove("active"));
-            document.querySelectorAll(".tab-content").forEach(content => content.classList.remove(
-                "active"));
-
-            button.classList.add("active");
-            document.getElementById(tab).classList.add("active");
-        });
-    });
-
-    function afficherImageIMC(imc) {
-        const img = document.getElementById("image-resultat");
-        let src = "../assets/IMC.jpg";
-
-        if (imc < 18.5) src = "images/maigreur.png";
-        else if (imc < 25) src = "images/normal.png";
-        else if (imc < 30) src = "images/surpoids.png";
-        else src = "images/obesite.png";
-
-        img.src = src;
-        img.style.display = "block";
-        img.classList.remove("show");
-
-        // Forcer le reflow pour relancer l'animation
-        void img.offsetWidth;
-
-        img.classList.add("show");
-    };
+    img.classList.add("show");
+};
 </script>
 
 </html>

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/CODE/assets/logo-vita-forma-v2.png" type="image/x-icon">
     <link rel="stylesheet" href="./header-style.css" />
 </head>
 
@@ -87,6 +88,17 @@
             </div>
         </div>
     </header>
+
+    <script>
+    window.addEventListener("scroll", () => {
+        const header = document.getElementById("main-header");
+        if (window.scrollY > 700) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    });
+    </script>
 
     <script>
     window.addEventListener("load", () => {
