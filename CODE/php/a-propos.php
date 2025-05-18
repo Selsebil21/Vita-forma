@@ -14,6 +14,8 @@
     <?php require './includes/header.php'; ?>
 
     <main>
+        <img id="hero-simulateur" src="/assets/fresque silhouette multiple.avif" alt="">
+
         <h2>A propos de Vita-forma</h2>
 
         <p>
@@ -101,7 +103,7 @@
         </P>
 
         <h3>
-            Vous avez une question ? Contactez-nous !
+            Vous avez une question ?
         </h3>
         <P>
             Pour toute question ou demande d’information, vous pouvez nous contacter au : contact@jemeremetsausport.com
@@ -118,7 +120,10 @@
 
             L’équipe de Je Me Remets au Sport .
         </P>
+
     </main>
+    <button class="cta-button" type="submit" onclick="window.location.href='./contact.php'"> Contactez-nous
+        !</button>
 
     <?php require './includes/footer.php'; ?>
 </body>
