@@ -1,0 +1,87 @@
+/* FOOTER  */
+
+.footer {
+background-color: black;
+color: #f0f0f0;
+padding: 40px 20px;
+font-family: Arial, sans-serif;
+}
+
+.footer-top {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 40px;
+margin-bottom: 30px;
+}
+
+.footer-logo {
+width: 150px;
+margin-bottom: 15px;
+}
+
+.footer-divider {
+border: 1px solid #555;
+margin: 15px 0;
+}
+
+.footer-section h4,
+.footer-logo-section h4 {
+font-size: 16px;
+font-weight: bold;
+margin-bottom: 15px;
+text-transform: uppercase;
+color: #ffffff;
+}
+
+.footer-section ul {
+list-style: none;
+padding: 0;
+}
+
+.footer-section ul li {
+margin: 8px 0;
+}
+
+.footer-section ul li a {
+text-decoration: none;
+color: #cccccc;
+transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+color: #ffffff;
+}
+
+.social-icons img {
+width: 24px;
+margin-right: 10px;
+filter: brightness(0) invert(1);/* rend l’icône blanche */
+transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+transform: scale(1.4);/* agrandit l’icône au survol */
+}
+
+.footer-bottom {
+border-top: 1px solid #333;
+padding-top: 20px;
+text-align: center;
+font-size: 14px;
+color: #aaa;
+}
+
+.footer-nav {
+margin-bottom: 10px;
+}
+
+.footer-nav a {
+margin: 0 10px;
+color: #cccccc;
+text-decoration: none;
+}
+
+.footer-nav a:hover {
+text-decoration: underline;
+color: #ffffff;
+}

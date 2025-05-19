@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#hero-simulateur {
+  width: 100%;
+  height: fit-content;
+  margin: 70px auto 0 auto;
+}
+
+.tab-titles {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.tab-button {
+  margin: auto;
+  padding: 40px 20px;
+  background-color: #f2f2f2;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.5s;
+}
+.tab-button:hover {
+  background-color: #258d464a;
+  cursor: pointer;
+}
+
+.tab-button.active {
+  background-color: #ff6b6b68;
+  border: none;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+  animation: fadeIn 0.4s ease;
+  width: 40%;
+  margin: 0 auto;
+}
+
+.visuel img {
+  max-width: 100%;
+  width: 200px;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transform: scale(0.8);
+  opacity: 0;
+}
+
+.visuel img.show {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  background: #fff;
+  padding: 20px;
+  margin: 50px auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input,
+select,
+button {
+  padding: 8px;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+button {
+  background: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.result {
+  font-weight: bold;
+  color: #27ae60;
+}

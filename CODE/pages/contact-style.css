@@ -1,0 +1,93 @@
+body {
+    background-image: url("../assets/paysage-yoga.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+
+main{
+margin: 14% 0;
+}
+
+
+
+.contact-section {
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 50px auto;
+    background: transparent;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.527);
+    overflow: hidden;
+  }
+
+  .contact-info, .contact-form {
+    padding: 30px;
+  }
+
+  .contact-info {
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.702);   
+    color: #fff;
+    gap: 2%;
+  }
+
+  .contact-form {
+    flex: 2;
+    background-color: rgba(255, 255, 255, 0.7);   
+  }
+
+  .contact-info h2 {
+    margin-top: 0;
+  }
+
+  .contact-info p {
+    margin: 10px 0;
+  }
+
+  .contact-form h2 {
+    margin-top: 0;
+  }
+
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
+  }
+
+  .contact-form label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+
+  .contact-form textarea {
+    resize: vertical;
+    height: 120px;
+  }
+  
+.contact-form button{
+    margin-top: 2%;
+    align-self: flex-end; /* <--- C'est cette ligne qui déplace le bouton à droite */
+}
+
+  @media (max-width: 768px) {
+    .contact-section {
+      flex-direction: column;
+    }
+  }
