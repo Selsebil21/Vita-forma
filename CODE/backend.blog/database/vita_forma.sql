@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mar. 06 mai 2025 à 10:49
+-- Généré le : lun. 19 mai 2025 à 07:46
 -- Version du serveur : 9.1.0
 -- Version de PHP : 8.4.0
 
@@ -23,7 +23,9 @@ SET time_zone = "+00:00";
 
 -- --------------------------------------------------------
 
+--
 -- Structure de la table `admin`
+--
 
 DROP TABLE IF EXISTS `admin`;
 CREATE TABLE IF NOT EXISTS `admin` (
@@ -35,9 +37,18 @@ CREATE TABLE IF NOT EXISTS `admin` (
   PRIMARY KEY (`id_admin`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+--
+-- Déchargement des données de la table `admin`
+--
+
+INSERT INTO `admin` (`id_admin`, `nom`, `prenom`, `email`, `mot_de_passe`) VALUES
+(1, 'Merine', 'Selsebil', 'selsebil.merine@gmail.com', 'vitaforma');
+
 -- --------------------------------------------------------
 
+--
 -- Structure de la table `article`
+--
 
 DROP TABLE IF EXISTS `article`;
 CREATE TABLE IF NOT EXISTS `article` (
@@ -54,7 +65,9 @@ CREATE TABLE IF NOT EXISTS `article` (
 
 -- --------------------------------------------------------
 
+--
 -- Structure de la table `categorie`
+--
 
 DROP TABLE IF EXISTS `categorie`;
 CREATE TABLE IF NOT EXISTS `categorie` (
@@ -65,7 +78,9 @@ CREATE TABLE IF NOT EXISTS `categorie` (
 
 -- --------------------------------------------------------
 
+--
 -- Structure de la table `contact`
+--
 
 DROP TABLE IF EXISTS `contact`;
 CREATE TABLE IF NOT EXISTS `contact` (
@@ -81,7 +96,9 @@ CREATE TABLE IF NOT EXISTS `contact` (
 
 -- --------------------------------------------------------
 
+--
 -- Structure de la table `newsletter`
+--
 
 DROP TABLE IF EXISTS `newsletter`;
 CREATE TABLE IF NOT EXISTS `newsletter` (
