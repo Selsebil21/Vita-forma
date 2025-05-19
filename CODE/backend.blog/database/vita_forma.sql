@@ -50,16 +50,16 @@ INSERT INTO `admin` (`id_admin`, `nom`, `prenom`, `email`, `mot_de_passe`) VALUE
 -- Structure de la table `article`
 --
 
-DROP TABLE IF EXISTS `article`;
-CREATE TABLE IF NOT EXISTS `article` (
-  `id_article` int NOT NULL,
+DROP TABLE IF EXISTS `articles`;
+CREATE TABLE IF NOT EXISTS `articles` (
+  `id_articles` int NOT NULL,
   `titre` varchar(250) NOT NULL,
   `extrait` varchar(1000) NOT NULL,
   `contenu` varchar(5000) NOT NULL,
   `id_categorie` int NOT NULL,
-  `date_publication` datetime NOT NULL,
+  `date_publication` timestamp NOT NULL,
   `image` varchar(250) NOT NULL,
-  PRIMARY KEY (`id_article`),
+  PRIMARY KEY (`id_articles`),
   KEY `id_categorie` (`id_categorie`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 

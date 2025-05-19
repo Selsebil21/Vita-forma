@@ -2,7 +2,7 @@
 require_once '../config/db.php';
 require_once '../config/auth.php';
 
-$stmt = $pdo->query("SELECT * FROM articles ORDER BY date_creation DESC");
+$stmt = $pdo->query("SELECT * FROM articles ORDER BY date_publication DESC");
 $articles = $stmt->fetchAll();
 ?>
 
@@ -11,8 +11,10 @@ $articles = $stmt->fetchAll();
 
 <?php foreach ($articles as $article): ?>
     <h2><?= htmlspecialchars($article['titre']) ?></h2>
-    <p><?= date('d/m/Y à H:i', strtotime($article['date_creation'])) ?></p>
-    <a href="edit_article.php?id=<?= $article['id'] ?>">✏️ Modifier</a> | 
-    <a href="delete_article.php?id=<?= $article['id'] ?>" onclick="return confirm('Supprimer cet article ?')">🗑️ Supprimer</a>
+    <p><?= date('d/m/Y à H:i', strtotime($article['date_publication'])) ?></p>
+    <a href="edit_article.php?id_articles=<?= $article['id_articles'] ?>">✏️ Modifier</a> |
+    <a href="delete_article.php?id_articles=<?= $article['id_articles'] ?>"
+        onclick="return confirm('Supprimer cet article ?')">🗑️
+        Supprimer</a>
     <hr>
 <?php endforeach; ?>
