@@ -24,23 +24,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <title>Modifier l'article</title>
     <script src="https://cdn.tiny.cloud/1/ta_cle_API/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <script>
-        tinymce.init({ selector: '#contenu', height: 400 });
+        tinymce.init({
+            selector: '#contenu',
+            height: 400
+        });
     </script>
 </head>
+
 <body>
-<h1>Modifier l'article</h1>
-<?php if (isset($message)) echo "<p style='color: green;'>$message</p>"; ?>
-<form method="POST">
-    <label for="titre">Titre :</label><br>
-    <input type="text" name="titre" id="titre" value="<?= htmlspecialchars($article['titre']) ?>" required><br><br>
-    <label for="contenu">Contenu :</label><br>
-    <textarea id="contenu" name="contenu"><?= htmlspecialchars($article['contenu']) ?></textarea><br><br>
-    <button type="submit">Mettre à jour</button>
-</form>
+    <h1>Modifier l'article</h1>
+    <?php if (isset($message)) echo "<p style='color: green;'>$message</p>"; ?>
+    <form method="POST">
+        <label for="titre">Titre :</label><br>
+        <input type="text" name="titre" id="titre" value="<?= htmlspecialchars($article['titre']) ?>" required><br><br>
+        <label for="contenu">Contenu :</label><br>
+        <textarea id="contenu" name="contenu"><?= htmlspecialchars($article['contenu']) ?></textarea><br><br>
+        <button type="submit">Mettre à jour</button>
+    </form>
 </body>
+
 </html>

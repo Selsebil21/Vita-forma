@@ -15,6 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <title>Ajouter un article</title>
@@ -28,15 +29,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         });
     </script>
 </head>
+
 <body>
-<h1>Ajouter un article</h1>
-<?php if (isset($message)) echo "<p style='color: green;'>$message</p>"; ?>
-<form method="POST">
-    <label for="titre">Titre :</label><br>
-    <input type="text" name="titre" id="titre" required><br><br>
-    <label for="contenu">Contenu :</label><br>
-    <textarea id="contenu" name="contenu"></textarea><br><br>
-    <button type="submit">Publier</button>
-</form>
+    <h1>Ajouter un article</h1>
+    <?php if (isset($message)) echo "<p style='color: green;'>$message</p>"; ?>
+    <form method="POST">
+        <label for="titre">Titre :</label><br>
+        <input type="text" name="titre" id="titre" required><br><br>
+        <label for="contenu">Contenu :</label><br>
+        <textarea id="contenu" name="contenu"></textarea><br><br>
+        <button type="submit">Publier</button>
+    </form>
 </body>
+
 </html>
