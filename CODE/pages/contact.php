@@ -7,7 +7,7 @@
     <title>Vita forma - Je me remets au sport</title>
     <link rel="stylesheet" href="./includes/header-style.css" />
     <link rel="stylesheet" href="./includes/footer-style.css" />
-    <link rel="stylesheet" href="../style_css/contact-style.css" />
+    <link rel="stylesheet" href="contact-style.css" />
 </head>
 
 <body>

@@ -7,14 +7,14 @@
     <title>A propos - Vita forma - Je me remets au sport</title>
     <link rel="stylesheet" href="./includes/header-style.css" />
     <link rel="stylesheet" href="./includes/footer-style.css" />
-    <link rel="stylesheet" href="../style_css/a-propos-style.css" />
+    <link rel="stylesheet" href="a-propos-style.css" />
 </head>
 
 <body>
     <?php require './includes/header.php'; ?>
 
     <main>
-        <img id="hero-simulateur" src="/assets/fresque silhouette multiple.avif" alt="">
+        <img id="hero-simulateur" src="/Visuels/assets/fresque silhouette multiple.avif" alt="">
 
         <h2>A propos de Vita-forma</h2>
 

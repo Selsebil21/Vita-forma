@@ -7,14 +7,14 @@
     <title>Vita forma - Je me remets au sport</title>
     <link rel="stylesheet" href="./includes/header-style.css" />
     <link rel="stylesheet" href="./includes/footer-style.css" />
-    <link rel="stylesheet" href="../style_css/simulateur-style.css" />
+    <link rel="stylesheet" href="simulateur-style.css" />
 </head>
 
 <body>
     <?php require './includes/header.php'; ?>
 
     <main>
-        <img id="hero-simulateur" src="/assets/fresque silhouette multiple.avif" alt="">
+        <img id="hero-simulateur" src="/Visuels/fresque silhouette multiple.avif" alt="">
         <div class="tabs">
             <div class="tab-titles">
                 <button class="tab-button active" data-tab="imc">IMC</button>
@@ -63,7 +63,7 @@
                             (kg) / (taille en m)²</strong>.
                     </p>
 
-                    <img src="/assets/IMC.jpg" alt="Indice de Masse Corporelle" />
+                    <img src="/Visuels/IMC.jpg" alt="Indice de Masse Corporelle" />
 
 
                     <form id="imc-form">
@@ -77,7 +77,7 @@
                     </form>
                     <div class="result" id="imc-result"></div>
                     <div class="visuel">
-                        <img id="image-resultat" src="../assets/IMC.jpg" alt="résultat visuel IMC graphique"
+                        <img id="image-resultat" src="/Visuels/IMC.jpg" alt="résultat visuel IMC graphique"
                             style="display:none;" />
                     </div>
                 </section>

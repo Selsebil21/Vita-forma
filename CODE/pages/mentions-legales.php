@@ -7,7 +7,7 @@
     <title>Mentions légales - Vita forma - Je me remets au sport</title>
     <link rel="stylesheet" href="./includes/header-style.css" />
     <link rel="stylesheet" href="./includes/footer-style.css" />
-    <link rel="stylesheet" href="../style_css/a-propos-style.css" />
+    <link rel="stylesheet" href="a-propos-style.css" />
 </head>
 
 <body>

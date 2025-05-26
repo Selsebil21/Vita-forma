@@ -7,7 +7,7 @@
     <title>Vita forma - Je me remets au sport</title>
     <link rel="stylesheet" href="./includes/header-style.css" />
     <link rel="stylesheet" href="./includes/footer-style.css" />
-    <link rel="stylesheet" href="../style_css/index-style.css" />
+    <link rel="stylesheet" href="index-style.css" />
 </head>
 
 <body>
@@ -23,10 +23,10 @@
                 </h1>
                 <button class="cta-button">
                     Accéder au blog
-                    <img src="../assets/double_chevron.png" alt="double chevron" />
+                    <img src="/Visuels/assets/double_chevron.png" alt="double chevron" />
                 </button>
             </div>
-            <img class="hero-img" src="../assets/entrainement-exercice.jpg" alt="entrainement-exercice" />
+            <img class="hero-img" src="/Visuels/entrainement-exercice.jpg" alt="entrainement-exercice" />
         </section>
 
         <section id="A-propos">
@@ -69,11 +69,11 @@
                             En savoir plus
                         </button>
                     </div>
-                    <img src="../assets/athletic-exercise.jpg" alt="exercice d'entrainement sportif" />
+                    <img src="/Visuels/entrainement-exercice.jpg" alt="exercice d'entrainement sportif" />
                 </div>
 
                 <div class="item-categories">
-                    <img src="../assets/training-gym.jpg" alt="exercice d'entrainement sportif" />
+                    <img src="/Visuels/training-gym.jpg" alt="exercice d'entrainement sportif" />
                     <div class="content-categories">
                         <h3>Nos programmes d'entrainement</h3>
                         <p>
@@ -107,7 +107,7 @@
                             En savoir plus
                         </button>
                     </div>
-                    <img src="../assets/sante-bien-etre.jpg" alt="conseil santé bien-être blog" />
+                    <img src="/Visuelss/sante-bien-etre.jpg" alt="conseil santé bien-être blog" />
                 </div>
             </div>
         </section>
@@ -116,14 +116,14 @@
             <h2>Articles récemment publiés</h2>
             <div class="carousel-container">
                 <button class="fleche gauche">
-                    <img src="../assets/en-arriere.png" alt="flèche gauche" />
+                    <img src="/Visuels/assets/en-arriere.png" alt="flèche gauche" />
                 </button>
 
                 <div class="carousel-wrapper">
                     <div class="carousel-track">
                         <!-- Article 1 -->
                         <div class="article">
-                            <img class="image-article" src="../assets/sport-dysfonction-erectrile.jpg" alt="..." />
+                            <img class="image-article" src="/Visuels/sport-dysfonction-erectrile.jpg" alt="..." />
                             <div class="article-content">
                                 <h3>La pratique du sport et la dysfonction érectile</h3>
                                 <p>
@@ -140,7 +140,7 @@
 
                         <!-- Article 2 -->
                         <div class="article">
-                            <img class="image-article" src="../assets/perte-ventre.jpg"
+                            <img class="image-article" src="/Visuels/perte-ventre.jpg"
                                 alt="perte de ventre après 40 ans" />
                             <div class="article-content">
                                 <h3>Perdre du ventre après 40 ans : les vraies solutions</h3>
@@ -158,7 +158,7 @@
 
                         <!-- Article 3 -->
                         <div class="article">
-                            <img class="image-article" src="../assets/alimentation-avant-sport.avif"
+                            <img class="image-article" src="/Visuels/alimentation-avant-sport.avif"
                                 alt="alimentation avant le sport" />
                             <div class="article-content">
                                 <h3>
@@ -177,7 +177,7 @@
 
                         <!-- Article 4 -->
                         <div class="article">
-                            <img class="image-article" src="../assets/regime-vegetarien.jpg"
+                            <img class="image-article" src="/Visuels/regime-vegetarien.jpg"
                                 alt="regime végétarien ou vegetalien" />
                             <div class="article-content">
 
@@ -200,7 +200,7 @@
                     </div>
                 </div>
                 <button class="fleche2">
-                    <img src="../assets/en-arriere.png" alt="flèche droite" />
+                    <img src="/Visuels/assets/en-arriere.png" alt="flèche droite" />
                 </button>
             </div>
 
@@ -239,7 +239,7 @@
 
             <!-- Un seul bouton, centré -->
             <div class="simulateur-button-container">
-                <a href="simulateurs.html" class="cta-button"> Lancer la simulation</a>
+                <a href="simulateur.php" class="cta-button"> Lancer la simulation</a>
             </div>
         </section>
 
@@ -247,17 +247,17 @@
         <section class=" slider">
             <div class="slides">
                 <div class="slide active">
-                    <img src="../assets/Panorama-planche-plage.jpg" alt="Slide 1" />
+                    <img src="/Visuels/Panorama-planche-plage.jpg" alt="Slide 1" />
                     <div class="caption">
                         <p>Se remettre au sport en toute confiance</p>
                     </div>
                 </div>
                 <div class="slide">
-                    <img src="../assets/Panorama-tennis-woman.jpg" alt="Slide 2" />
+                    <img src="/Visuels/Panorama-tennis-woman.jpg" alt="Slide 2" />
                     <div class="caption">Reprenez en main votre forme physique</div>
                 </div>
                 <div class="slide">
-                    <img src="../assets/Panorama-running-woman.jpg" alt="Slide 3" />
+                    <img src="/Visuels/Panorama-running-woman.jpg" alt="Slide 3" />
                     <div class="caption">Des conseils pour tous !</div>
                 </div>
             </div>
@@ -286,7 +286,7 @@
                             <button type="submit" class="cta-button">Soumettre</button>
                         </form>
                     </div>
-                    <img class="newsletter-image" src="../assets/megaphone-newletter-removebg-preview.png"
+                    <img class="newsletter-image" src="/Visuels/assets/megaphone-newletter-removebg-preview.png"
                         alt="megaphone alerte mail" />
                 </div>
             </div>
@@ -298,92 +298,92 @@
 </body>
 
 <script>
-const items = document.querySelectorAll('.item-categories');
+    const items = document.querySelectorAll('.item-categories');
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.3
     });
-}, {
-    threshold: 0.3
-});
 
-items.forEach((item, index) => {
-    // Alterne gauche/droite selon la position de l'élément
-    if (index % 2 === 0) {
-        item.classList.add('from-left');
-    } else {
-        item.classList.add('from-right');
-    }
-    observer.observe(item);
-});
+    items.forEach((item, index) => {
+        // Alterne gauche/droite selon la position de l'élément
+        if (index % 2 === 0) {
+            item.classList.add('from-left');
+        } else {
+            item.classList.add('from-right');
+        }
+        observer.observe(item);
+    });
 </script>
 
 <script>
-let currentIndex = 0;
-const slides = document.querySelectorAll(".slide");
+    let currentIndex = 0;
+    const slides = document.querySelectorAll(".slide");
 
-setInterval(() => {
-    slides[currentIndex].classList.remove("active");
-    currentIndex = (currentIndex + 1) % slides.length;
-    slides[currentIndex].classList.add("active");
-    document.querySelector(".slides").style.transform = `translateX(-${
+    setInterval(() => {
+        slides[currentIndex].classList.remove("active");
+        currentIndex = (currentIndex + 1) % slides.length;
+        slides[currentIndex].classList.add("active");
+        document.querySelector(".slides").style.transform = `translateX(-${
         currentIndex * 100
       }%)`;
-}, 4000);
+    }, 4000);
 </script>
 
 <script>
-const track = document.querySelector(".carousel-track");
-const articles = document.querySelectorAll(".article");
-const nextBtn = document.querySelector(".fleche2");
-const prevBtn = document.querySelector(".gauche");
-const dotsContainer = document.querySelector(".carousel-dots");
+    const track = document.querySelector(".carousel-track");
+    const articles = document.querySelectorAll(".article");
+    const nextBtn = document.querySelector(".fleche2");
+    const prevBtn = document.querySelector(".gauche");
+    const dotsContainer = document.querySelector(".carousel-dots");
 
-const visibleArticles = 3;
-const total = articles.length;
-const totalSlides = Math.ceil(total / visibleArticles);
-let index = 0;
+    const visibleArticles = 3;
+    const total = articles.length;
+    const totalSlides = Math.ceil(total / visibleArticles);
+    let index = 0;
 
-// Crée les bulles
-for (let i = 0; i < totalSlides; i++) {
-    const dot = document.createElement("div");
-    dot.classList.add("dot");
-    if (i === 0) dot.classList.add("active");
-    dot.addEventListener("click", () => {
-        index = i;
+    // Crée les bulles
+    for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement("div");
+        dot.classList.add("dot");
+        if (i === 0) dot.classList.add("active");
+        dot.addEventListener("click", () => {
+            index = i;
+            updateCarousel();
+        });
+        dotsContainer.appendChild(dot);
+    }
+
+    function updateDots() {
+        document.querySelectorAll(".carousel-dots .dot").forEach((dot, i) => {
+            dot.classList.toggle("active", i === index);
+        });
+    }
+
+    function updateCarousel() {
+        const width = articles[0].offsetWidth + 19; // 19px ≈ gap
+        track.style.transform = `translateX(-${index * width * visibleArticles}px)`;
+        updateDots();
+    }
+
+    function next() {
+        index = (index + 1) % totalSlides;
         updateCarousel();
-    });
-    dotsContainer.appendChild(dot);
-}
+    }
 
-function updateDots() {
-    document.querySelectorAll(".carousel-dots .dot").forEach((dot, i) => {
-        dot.classList.toggle("active", i === index);
-    });
-}
+    function prev() {
+        index = (index - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+    }
 
-function updateCarousel() {
-    const width = articles[0].offsetWidth + 19; // 19px ≈ gap
-    track.style.transform = `translateX(-${index * width * visibleArticles}px)`;
-    updateDots();
-}
-
-function next() {
-    index = (index + 1) % totalSlides;
-    updateCarousel();
-}
-
-function prev() {
-    index = (index - 1 + totalSlides) % totalSlides;
-    updateCarousel();
-}
-
-nextBtn.addEventListener("click", next);
-prevBtn.addEventListener("click", prev);
-setInterval(next, 5000);
+    nextBtn.addEventListener("click", next);
+    prevBtn.addEventListener("click", prev);
+    setInterval(next, 5000);
 </script>
 
 </html>

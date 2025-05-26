@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/CODE/assets/logo-vita-forma-v2.png" type="image/x-icon">
-    <link rel="stylesheet" href="./header-style.css" />
+    <link rel="icon" href="/Visuels/assets/logo-vita-forma-v2.png" type="image/x-icon">
+    <link rel="stylesheet" href="header-style.css" />
 </head>
 
 <body>
@@ -14,24 +14,24 @@
     </div>
 
     <header id="main-header">
-        <div class="header-bottom">
+        <div class="header">
 
-            <a href="/php/index.php">
-                <img src="/assets/logo-vita-forma_transparent.png" alt="Logo Vita Forma" class="logo" />
+            <a href="/pages/index.php">
+                <img src="/Visuels/assets/logo-vita-forma_transparent.png" alt="Logo Vita Forma" class="logo" />
             </a>
 
             <nav class="navbar">
                 <ul>
-                    <li><a href="/php/index.php">Accueil</a></li>
+                    <li><a href="/pages/index.php">Accueil</a></li>
                     <li class="li-dropdown">
                         <a href="#">
                             Blog
-                            <img src="/assets/arrow_drop_down.png" alt="flèche vers le bas" />
+                            <img src="/Visuels/assets/arrow_drop_down.png" alt="flèche vers le bas" />
                         </a>
                         <ul class="submenu">
                             <li>
                                 <a href="#">Article de santé et de bien-être
-                                    <img src="/assets/arrow-right.png" alt=" flèche vers la droite" />
+                                    <img src="/Visuels/assets/arrow-right.png" alt=" flèche vers la droite" />
                                 </a>
                                 <ul class="submenu">
                                     <li><a href="#">Santé</a></li>
@@ -42,7 +42,7 @@
                             </li>
                             <li>
                                 <a href="#">Fiches d'exercices sportifs
-                                    <img src="/assets/arrow-right.png" alt=" flèche vers la droite" />
+                                    <img src="/Visuels/assets/arrow-right.png" alt=" flèche vers la droite" />
                                 </a>
                                 <ul class="submenu">
                                     <li><a href="#">Haut du corps</a></li>
@@ -52,7 +52,7 @@
                             </li>
                             <li>
                                 <a href="#">Programmes d'entraînements
-                                    <img src="/assets/arrow-right.png" alt=" flèche vers la droite" />
+                                    <img src="/Visuels/assets/arrow-right.png" alt=" flèche vers la droite" />
                                 </a>
                                 <ul class="submenu">
                                     <li><a href="#">Perte de poids</a></li>
@@ -67,23 +67,23 @@
 
 
                     <li class="li-dropdown">
-                        <a href="/php/simulateur.php">
+                        <a href="/pages/simulateur.php">
                             Simulateurs
-                            <img src="/assets/arrow_drop_down.png" alt="flèche vers le bas" />
+                            <img src="/Visuels/assets/arrow_drop_down.png" alt="flèche vers le bas" />
                         </a>
                         <ul class="submenu">
-                            <li><a href="/php/simulateur.php">Calcul ton IMC</a></li>
-                            <li><a href="/php/simulateur.php">Calcul ton IMG</a></li>
-                            <li><a href="/php/simulateur.php">Calcul ton apport calorique quotidien</a></li>
+                            <li><a href="../simulateur.php">Calcul ton IMC</a></li>
+                            <li><a href="../simulateur.php">Calcul ton IMG</a></li>
+                            <li><a href="../simulateur.php">Calcul ton apport calorique quotidien</a></li>
                         </ul>
                     </li>
-                    <li><a href="/php/a-propos.php">À propos</a></li>
-                    <li><a href="/php/contact.php">Contact</a></li>
+                    <li><a href="/pages/a-propos.php">À propos</a></li>
+                    <li><a href="/pages/contact.php">Contact</a></li>
                 </ul>
             </nav>
 
             <div class="search-box">
-                <img src="/assets/symbole-de-linterface-de-recherche.png" alt="Loupe" />
+                <img src="/Visuels/assets/symbole-de-linterface-de-recherche.png" alt="Loupe" />
                 <input type="search" placeholder="Rechercher..." />
             </div>
         </div>

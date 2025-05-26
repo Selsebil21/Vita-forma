@@ -35,8 +35,6 @@ body {
   backdrop-filter: blur(8px);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   box-shadow: none;
-  display: flex;
-  flex-direction: column;
 }
 
 /* ÉTAT OPAQUE AU SCROLL */
@@ -72,13 +70,12 @@ body {
 }
 
 /* DEUXIÈME BARRE (NAV + SEARCH) */
-.header-bottom {
+.header {
   width: 98%;
   margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 2px solid var(--primary);
   flex-wrap: wrap;
 }
 
