@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./includes/header-style.css" />
     <link rel="stylesheet" href="./includes/footer-style.css" />
     <link rel="stylesheet" href="index-style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -18,15 +19,14 @@
             <div class="hero-overlay"></div>
             <div class="hero-content">
                 <h1>
-                    Retrouvez tous nos conseils pour se<br />
-                    remettre au sport en toute confiance
+                    Retrouvez tous nos conseils pour se remettre au sport en toute confiance
                 </h1>
                 <button class="cta-button">
                     Accéder au blog
                     <img src="/Visuels/assets/double_chevron.png" alt="double chevron" />
                 </button>
             </div>
-            <img class="hero-img" src="/Visuels/entrainement-exercice.jpg" alt="entrainement-exercice" />
+            <img class="hero-img" src="/Visuels/background-3.jpg" alt=" entrainement-exercice" />
         </section>
 
         <section id="A-propos">
@@ -107,7 +107,7 @@
                             En savoir plus
                         </button>
                     </div>
-                    <img src="/Visuelss/sante-bien-etre.jpg" alt="conseil santé bien-être blog" />
+                    <img src="/Visuels/sante-bien-etre.jpg" alt="conseil santé bien-être blog" />
                 </div>
             </div>
         </section>
@@ -295,6 +295,12 @@
 
     <?php require './includes/footer.php'; ?>
 
+    <div id="cookie-popup" class="cookie-popup">
+        <p>Ce site utilise des cookies pour vous garantir la meilleure expérience. <a
+                href="/politique-de-confidentialite.html" target="_blank">En savoir plus</a></p>
+        <button id="accept-cookies">Accepter</button>
+    </div>
+
 </body>
 
 <script>
@@ -384,6 +390,22 @@
     nextBtn.addEventListener("click", next);
     prevBtn.addEventListener("click", prev);
     setInterval(next, 5000);
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const popup = document.getElementById("cookie-popup");
+        const acceptBtn = document.getElementById("accept-cookies");
+
+        if (!localStorage.getItem("cookiesAccepted")) {
+            popup.style.display = "block";
+        }
+
+        acceptBtn.addEventListener("click", function() {
+            localStorage.setItem("cookiesAccepted", "true");
+            popup.style.display = "none";
+        });
+    });
 </script>
 
 </html>

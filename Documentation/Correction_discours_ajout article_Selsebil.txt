@@ -1,0 +1,60 @@
+
+Selsebil – Fonctionnalité d'ajout d'article (Vita-forma)
+
+Ce qui est cool dans ton discours :
+
+- Tu as identifié une vraie fonctionnalité clé pour un blog santé : l’ajout et la publication d’articles.
+- Tu as bien expliqué l’intérêt de la fonctionnalité et sa place centrale dans le projet.
+- L’utilisation de TinyMCE est un excellent choix pour un éditeur de texte riche. C’est pertinent et professionnel.
+- Tu as intégré les notions d’interaction client/serveur/base de données, ce qui montre une bonne compréhension du full stack.
+
+
+Ce que tu dois revoir et améliorer: 
+
+1. Sois plus précise sur le code HTML
+   Même si tu décris la structure globale (4 divs, 1 bouton…), pense à insérer un extrait de ton code HTML. Par exemple :
+   <form method="POST">
+       <input type="text" name="titre" placeholder="Titre de l'article">
+       <input type="file" name="image_couverture">
+       <textarea id="editor" name="contenu"></textarea>
+       <select name="categorie">...</select>
+       <button type="submit">Publier</button>
+   </form>
+
+2. Expliquer comment TinyMCE est intégré
+   Tu peux ajouter une ligne comme :
+   <script>tinymce.init({ selector: '#editor' });</script>
+   Et expliquer que cela transforme le champ texte en éditeur WYSIWYG (c'est la méthode WhatYouSeeIsWhatYouGet)
+
+3. Côté PHP : détaille le traitement
+   Explique ce que fait ton script quand le formulaire est soumis :
+   - Vérifie si tous les champs sont remplis
+   - Protège les données (htmlspecialchars, vérification d’image, etc.)
+   - Utilise PDO avec une requête préparée :
+     $stmt = $pdo->prepare("INSERT INTO articles (titre, contenu, image, categorie) VALUES (?, ?, ?, ?)");
+     $stmt->execute([$titre, $contenu, $image, $categorie]);
+
+4. Structure SQL de la table articles
+   Tu peux indiquer :
+   CREATE TABLE articles (
+       id INT AUTO_INCREMENT PRIMARY KEY,
+       titre VARCHAR(255),
+       contenu TEXT,
+       image VARCHAR(255),
+       categorie VARCHAR(100),
+       date_publication DATETIME DEFAULT CURRENT_TIMESTAMP,
+       statut ENUM('brouillon', 'publie')
+   );
+
+5. Donne un exemple de retour utilisateur
+   Tu dis qu’un message vert s’affiche : montre le code de ce message ou décris quand et comment il apparaît.
+
+✨ Pour la soutenance
+
+- Prépare une démo simple où tu ajoutes un article depuis le formulaire
+- Montre comment l’article s’affiche ensuite sur la page blog
+- Prévois de dire ce qui pourrait être amélioré : ajout d’un système de brouillon, aperçu avant publication, ou gestion des erreurs serveur.
+
+Conclusion :
+Tu gagnes à étoffer tes exemples concrets et à montrer davantage ton code pour convaincre le jury que tu comprends ce que tu as fait. Continue comme ça, tu es sur la bonne voie !
+

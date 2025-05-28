@@ -45,23 +45,27 @@ body {
 
 /* BOUTON CONNEXION */
 .cta-button {
-  width: auto;
+  max-width: fit-content;
+  background-color: var(--bg-transparent);
+  color: var(--text);
+  font-family: "Playfair Displa*", serif;
+  font-size: 1.5rem;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 30px;
+  font-weight: 500;
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 20px;
-  background-color: #db7328;
-  color: white;
-  font-size: 1rem;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
+  gap: 0.5rem;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(246, 138, 44, 0.705);
 }
 
 .cta-button:hover {
-  background-color: #db7328da;
-  color: white;
+  background-color: #e5781b;
+  color: var(--bg-solid);
+  cursor: pointer;
+  transform: translateY(-2px);
 }
 
 .cta-button img {
@@ -141,6 +145,13 @@ body {
   position: relative;
 }
 
+.navbar a img {
+  height: 1.3rem; /* ou 1rem, ou une autre taille fixe */
+  width: auto;
+  margin-left: 4px; /* espace entre le texte et l’icône */
+  align-self: center; /* empêche l'étirement vertical */
+}
+
 .navbar a::after {
   content: "";
   position: absolute;
@@ -206,48 +217,47 @@ body {
 /* SEARCH BAR */
 .search-box {
   position: relative;
-  display: inline-block;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding-left: 2.5%;
-  cursor: pointer;
+  width: 100%;
+  max-width: 200px;
 }
 
 .search-box img {
   position: absolute;
-  left: 10px;
+  left: 12px;
   top: 50%;
   transform: translateY(-50%);
-  pointer-events: none;
-  height: 25px;
+  height: clamp(16px, 2vw, 22px);
   width: auto;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .search-box input {
-  padding-left: 35px;
-  border: none;
-  font-size: 1rem;
-  padding: 8px 12px;
-  border-radius: 6px;
-  max-width: 400px;
+  width: 100%;
+  padding: 10px 12px;
+  padding-left: 42px; /* espace pour l’image */
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  border: 1px solid #ccc;
+  border-radius: 8px;
   background-color: #f9f9f9;
+  box-sizing: border-box;
 }
 
 .search-box input:focus {
   outline: 1px solid var(--primary);
 }
+
 /* FIN DU HEADER */
 
 /* MAIN */
 
 /* POLICE DES TITRES */
 h1 h3 {
-  font-family: "Oswald", sans-serif;
+  font-family: "Playfair Displa*", serif;
 }
 
 h2 {
-  font-family: "Oswald", sans-serif;
+  font-family: "Playfair Displa*", serif;
   padding: 1% 0;
   text-align: center;
 }

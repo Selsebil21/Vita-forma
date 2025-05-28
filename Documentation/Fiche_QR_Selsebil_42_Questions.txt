@@ -1,0 +1,139 @@
+Fiche d'entraînement – 33 Questions / Réponses – Selsebil (Formulaire de publication d’article – Blog santé Vita-forma)
+
+🔧 Partie projet : Fonctionnalité de publication
+
+1. Q : Quelle est la fonctionnalité principale de ton site ?
+   R : Permettre à l’administrateur de publier des articles de blog via un formulaire complet.
+
+2. Q : Que contient le formulaire de publication ?
+   R : Titre, image de couverture, contenu enrichi (via éditeur), catégorie.
+
+3. Q : Quel éditeur as-tu utilisé pour la rédaction ?
+   R : TinyMCE.
+
+4. Q : Pourquoi avoir utilisé un éditeur WYSIWYG ?
+   R : Pour faciliter la mise en forme du contenu sans écrire de HTML à la main.
+
+5. Q : Comment est intégré TinyMCE ?
+   R : Via un script JavaScript qui transforme une <textarea> en éditeur.
+
+6. Q : Que fait ton script PHP à la soumission du formulaire ?
+   R : Il vérifie les champs, sécurise les données et insère l’article en base.
+
+7. Q : Quelle structure SQL as-tu utilisée pour la table article ?
+   R : id, titre, contenu, image, catégorie, date_publication, statut.
+
+8. Q : À quoi sert le champ “statut” ?
+   R : À différencier les articles brouillons et ceux publiés.
+
+9. Q : Que fais-tu si un champ est manquant ?
+   R : Je renvoie un message d’erreur et je n’exécute pas l’insertion.
+
+🛠 Sécurité et fiabilité
+
+10. Q : Comment sécurises-tu les entrées du formulaire ?
+    R : htmlspecialchars(), vérification de longueur, type MIME pour les fichiers.
+
+11. Q : As-tu prévu un traitement des images ?
+    R : Oui, je vérifie l’extension, je renomme le fichier et je l’enregistre dans un dossier sécurisé.
+
+12. Q : Quelle est la limite de taille que tu acceptes ?
+    R : Je définis une taille maximale (ex : 2 Mo) dans le code PHP et HTML.
+
+13. Q : Que fais-tu si l’upload échoue ?
+    R : Je gère l’erreur avec un message clair à l’utilisateur.
+
+📚 Cours / REAC DWWM
+
+14. Q : Qu’est-ce qu’un CMS ?
+    R : Un système de gestion de contenu, comme WordPress ou Joomla, qui facilite la gestion de sites.
+
+15. Q : Quelle est la différence entre un CMS et un site codé en fullstack ?
+    R : Un CMS est basé sur des modules prêts à l’emploi, alors qu’un site fullstack est 100% personnalisé.
+
+16. Q : Qu’est-ce que CRUD ?
+    R : Create, Read, Update, Delete : les 4 opérations de base en base de données.
+
+17. Q : Qu’est-ce qu’un champ `TEXT` dans une base de données ?
+    R : Un type qui permet de stocker de longues chaînes de caractères (comme un contenu d’article).
+
+18. Q : Pourquoi utiliser des requêtes préparées ?
+    R : Pour éviter les injections SQL et sécuriser les interactions avec la base.
+
+19. Q : Que signifie `$_FILES` ?
+    R : Une superglobale PHP qui permet de récupérer les fichiers envoyés via un formulaire.
+
+20. Q : Qu’est-ce que PDO ?
+    R : PHP Data Object, une méthode sécurisée pour interagir avec une base de données.
+
+🔧 Outils, méthodes et déploiement
+
+21. Q : Utilises-tu Git ?
+    R : Oui, pour suivre mes modifications et revenir à une version antérieure en cas d’erreur.
+
+22. Q : Quelle commande crée un nouveau dépôt Git local ?
+    R : git init
+
+23. Q : Que fais-tu avant de publier un site ?
+    R : Je teste toutes les fonctionnalités, sécurise les formulaires, configure les accès.
+
+24. Q : Qu’est-ce qu’un environnement de développement local ?
+    R : Un serveur simulé (ex : XAMPP) qui permet de développer en local avant déploiement.
+
+🌐 Accessibilité, SEO, bonnes pratiques
+
+25. Q : As-tu pensé à l’accessibilité ?
+    R : Oui, avec des labels clairs, une navigation clavier, et un bon contraste de couleurs.
+
+26. Q : Quelle balise utilises-tu pour indiquer le titre d’un article ?
+    R : <h1> pour le titre principal, <h2> à <h6> pour les sous-parties.
+
+27. Q : Qu’est-ce qu’une URL lisible ?
+    R : Une URL courte, claire, avec des mots-clés (ex : /blog/mon-article-sante).
+
+28. Q : Pourquoi le responsive design est-il important ?
+    R : Pour que le site soit lisible sur téléphone, tablette et ordinateur.
+
+29. Q : Comment as-tu adapté ton formulaire aux petits écrans ?
+    R : J’ai utilisé Flexbox et des media queries.
+
+🧠 Mise en situation / analyse
+
+30. Q : Si un administrateur te demande de pouvoir enregistrer un article sans le publier, que fais-tu ?
+    R : J’ajoute une case à cocher ou un champ de statut, et j’adapte l’affichage public.
+
+31. Q : Si plusieurs auteurs doivent écrire, que dois-tu prévoir ?
+    R : Un système de comptes avec rôles, et un champ auteur dans la table articles.
+
+32. Q : Si tu voulais ajouter un système de tags, que ferais-tu ?
+    R : Créer une table tags et une table de liaison articles_tags (relation many-to-many).
+
+33. Q : Quelle évolution technique envisages-tu ?
+    R : Ajouter la prévisualisation de l’article avant publication, ou une sauvegarde automatique du brouillon.
+
+34. Q : Comment pourrais-tu permettre l'ajout de plusieurs images dans un article ?
+    R : En utilisant un champ <input type="file" multiple> et en traitant chaque fichier côté PHP.
+
+35. Q : Quelle différence entre MySQL et MariaDB ?
+    R : MariaDB est un fork libre de MySQL, souvent plus rapide et totalement open source.
+
+36. Q : Que signifie RGPD et que dois-tu respecter en tant que développeuse ?
+    R : Règlement Général sur la Protection des Données : demander le consentement, sécuriser les données, informer l’utilisateur.
+
+37. Q : Quelle commande permet de cloner un dépôt distant sur GitHub ?
+    R : git clone <url-du-dépôt>
+
+38. Q : Comment créer un commit Git avec message ?
+    R : git commit -m "Ajout de la fonctionnalité de publication d’articles"
+
+39. Q : Quelle structure adopterais-tu pour gérer des catégories et sous-catégories ?
+    R : Une table `categories` avec id, nom, parent_id pour gérer la hiérarchie.
+
+40. Q : Quelle méthode PHP utilises-tu pour déplacer un fichier après upload ?
+    R : move_uploaded_file()
+
+41. Q : Pourquoi faut-il filtrer les balises HTML dans le contenu d’un article ?
+    R : Pour éviter les injections XSS et protéger le site des scripts malveillants.
+
+42. Q : Comment pourrais-tu ajouter une pagination dans la liste des articles ?
+    R : En limitant les résultats SQL avec LIMIT et OFFSET, puis en affichant des liens de page.
